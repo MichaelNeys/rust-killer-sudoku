@@ -6,7 +6,6 @@ use clap::{Parser, Subcommand};
 use std::fs::File;
 use std::io::BufReader;
 use std::path::PathBuf;
-use std::time::Instant;
 
 use grid::{get_invalid_mask, print_grid};
 use models::{Given, SudokuJson, SudokuMeta};
@@ -73,16 +72,10 @@ fn main() {
             let mask = get_invalid_mask(&grid, &meta);
             print_grid(&grid, &mask);
         }
-        Commands::Solve { output, seq } => {
-            // timer starten
-            let start = Instant::now();
-            
+        Commands::Solve { output, seq } => {            
             if let Some(solution) = solve_recursive(&grid, &meta, 0, seq) {
-                let duration = start.elapsed();
                 let mask = [[false; 9]; 9];
                 print_grid(&solution, &mask);
-
-                println!("\nSolution found in: {:?}", duration);
 
                 // als output gegeven is proberen we te schrijven naar JSON
                 if let Some(out_path) = output {
@@ -102,12 +95,9 @@ fn main() {
                         .expect("Could not write solution to JSON");
                 }
             } else {
-                let duration = start.elapsed();
                 // originele als we geen oplossing hebben
                 let mask = [[false; 9]; 9];
                 print_grid(&grid, &mask);
-
-                println!("\nNo solution found in: {:?}", duration);
             }
         }
     }

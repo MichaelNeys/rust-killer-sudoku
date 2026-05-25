@@ -25,9 +25,6 @@ Ik ben recursief tewerk gegaan in de functie `solve_recursive` door eerst de bes
 
 Voor parallelisme heb ik gebruik gemaakt van `rayon` met `into_par_iter`. Ik heb de grens gesteld op 4 lagen diep omdat ik merkte dat dat iets sneller was dan 3 of minder bij de moeilijke JSON die wij kregen.
 
-### solve-time
-Om bij te houden hoelang mijn code erover deed heb ik ook een timer instance toegevoegd wat het voormij gemakkelijker maakte of een van mijn optimalisaties veel invloed had.
-
 ## Tests
 Ik heb in `grid.rs` en `solver.rs` testen geschreven voor de basis functionaliteit van mijn functies en/of helpfuncties te testen.
 

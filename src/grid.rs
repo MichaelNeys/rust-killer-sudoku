@@ -17,7 +17,7 @@ pub fn print_grid(grid: &[[u8; 9]; 9], invalid_mask: &[[bool; 9]; 9]) {
             }
             // spacing
             if col == 2 || col == 5 {
-                print!(" ");
+                print!("  ");
             }
         }
         // spacing
