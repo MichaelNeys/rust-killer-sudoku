@@ -38,4 +38,4 @@ Uit feedback van het vorige Rust project heb ik proberen rekening te houden om b
 Ondanks dat ik weinig tijd had door andere projectwerken en de verkiezingsweek van de studentenvereniging van Informatica is het mij toch gelukt om het project te maken, ik ben er zeker een goede 17 uur in totaal mee bezig geweest.
 
 # Folder structuur
-We moeten het in folder `/`, ik versta dit als de root van de project folder en niet de root van mijn systeem.
+We moeten het in folder `/` indienen, ik versta dit als de root van de project folder en niet de root van mijn systeem. Er was enige twijfel of we een folder `src` of dergelijke mochten aanmaken maar als er staat dat de volledige implementatie in `/` moet koos ik om alles in de root van het project te zetten.
